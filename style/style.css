@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Roboto&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Lobster&family=Shadows+Into+Light&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Oswald', sans-serif;
+}
+
+
+/* //// INDEX //// */
+
+/* //// HEADER //// */
+header {
+    margin-bottom: 2.3rem;
+}
+.brand-name {
+    font-family: "Shadows Into Light", cursive;
+    font-size: 1.8rem;
+} 
+
+/* //// SLIDESHOW //// */
+.carousel-item > img {
+    filter: brightness(50%);
+    height: 100%;
+    object-fit: cover;
+}
+.carousel-item {
+    height: 80vh;
+}
+/* //// QUESTO SOTTO POSSO FARLO CON LE CLASSI DI BOOTSRAP */
+.carousel-caption {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+.carousel-caption button {
+    align-self: flex-start;
+}
+.carousel h5 {
+    font-size: calc(1rem + 2.9vw)
+}
+
+/* //// CARD SECTION 1 //// */
+.card-group h5 {
+    font-size: calc(1rem + 1.5vw)
+}
+.cg-1 > .card {
+    background-color: transparent;
+}
+.cg-1 {
+    background-color: #d3e5e5b3;
+}
+/* effetto sul pulsante */
+.cg-1 a {
+    transition: 0.5s;
+}
+.cg-1 a span {
+    position: relative;
+}
+.cg-1 a span::after {
+    content: "\00bb";
+    position: absolute;
+    bottom: -2px;
+    opacity: 0;
+    right: -18px;
+    transition: opacity 0.5s;
+}
+.cg-1 a:hover {
+    padding-right: 30px;
+}
+.cg-1 a:hover span::after{
+    opacity: 1;
+}
+
+/* //// CARD SECTION 2 //// */
+.cg-2 span {
+    color: gray;
+}
+.cg-2 img {
+    width: 100%;
+}
+
+/* //// FOOTER //// */
+footer {
+    font-size: smaller;
+}
+footer a {
+    color: white;
+}
+
+/* //// MEDIA QUERIES //// */
+@media (min-width: 576px) {
+    
+    /* //// CARD SECTION 1 //// */
+    .cg-1 {
+        justify-content: space-around;
+    }
+    .cg-1 > .card {
+        flex: 0 0 40%;
+    }
+    .cg-1 .card-body {
+        max-width: 320px;
+        margin: 0 auto
+    }
+/* //// CARD SECTION 2 //// */
+    .cg-2 .card > img {
+        width: 50%;
+    }
+}
+
+@media (min-width: 992px) {
+    /* //// CARD SECTION 1 //// */
+    .cg-1 > .card {
+        flex: 0 0 25%;
+    }
+    .cg-1 .card-body {
+        max-width: 100%;
+    }
+}
+
+
+/* //// ABOUT //// */
+
+/* //// MAIN //// */
+
+/* //// BG FOTO ABOUT //// */
+main {
+    position: relative;
+}
+.bg-pic {
+    background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../img/staff.jpg);
+    height: 60vh;
+    background-size: cover;
+    background-position: center 10%;
+}
+
+
+/*  //// STAFF SECTION //// */
+.staff {
+    background-color: #d3e5e5b3
+}
+.staff img{
+    height: 300PX;
+    width: 100%;
+    object-fit: cover;
+    object-position: center 10%;
+}
+
+
+/* //// MENU //// */
+
+/* //// BACKGROUND IMAGE //// */
+.bg-pic-menu {
+    background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../img/dishes.jpg);
+    height: 60vh;
+    background-size: cover;
+    background-position: center 10%;
+}
+
+/* //// MENU TABS //// */
+/* .menu-tabs {
+    font-size: 1.3rem;
+} */
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: var(--bs-nav-pills-link-active-color);
+    background-color: gray;
+    padding: 10px 20px;
+}
+.nav-pills .nav-link {
+    color: gray;
+}
+
+/*  //// HERO //// */
+.hero-content {
+    background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../img/restaurant-background.jpg);
+    height: 90vh;
+    background-position: center 20%;
+    background-attachment: fixed;
+}
+.semi-transparent {
+    background-color: rgba(0,0,0,0.70);
+}
+.hero-content img {
+    max-width: 180px;
+}
+.hero-content > div {
+    max-width: 750px;
+}
